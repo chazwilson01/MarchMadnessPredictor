@@ -198,14 +198,14 @@ if st.button("Predict"):
                 
                 with col1:
                     st.write(f"**{team1_stats['TeamName']}**")
-                    st.write(f"Seed: {team1_stats['Seed']}")
+                    st.write(f"Seed: {team1_stats['Seed'] if team1_stats['Seed'] != 0 else 'Not in Tournament'}")
                     st.write(f"PPG: {(team1_stats['PPG']):.1f}")
                     st.write(f"FG%: {(team1_stats['FG_Percentage'] * 100):.1f}%")
                     st.write(f"3P%: {(team1_stats['FG3_Percentage'] * 100):.1f}%")
                     
                 with col2:
                     st.write(f"**{team2_stats['TeamName']}**")
-                    st.write(f"Seed: {team2_stats['Seed']}")
+                    st.write(f"Seed: {team2_stats['Seed'] if team2_stats['Seed'] != 0 else 'Not in Tournament'}")
                     st.write(f"PPG: {(team2_stats['PPG']):.1f}")
                     st.write(f"FG%: {(team2_stats['FG_Percentage'] * 100):.1f}%")
                     st.write(f"3P%: {(team2_stats['FG3_Percentage'] * 100):.1f}%")
